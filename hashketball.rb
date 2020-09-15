@@ -1,6 +1,6 @@
 require 'pry'
 # Write your code below game_hash
-def @game_hash
+def game_hash
   {
     home: {
       team_name: "Brooklyn Nets",
@@ -128,7 +128,8 @@ def @game_hash
 end
 
 def num_points_scored(name)
-  @game_hash.each do |location, team_info|
+  game_hash
+  game_hash.each do |location, team_info|
     team_info[:players].each do |player_stats|
       if player_stats[:player_name] == name
         return player_stats[:points]
